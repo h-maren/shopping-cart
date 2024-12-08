@@ -4,9 +4,12 @@ import Home from './components/Home.jsx'
 import Shop from './components/Shop.jsx'
 import ErrorPage from './components/ErrorPage.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {useState} from 'react'
 
 
 function App() {
+  
+  const [shoppingCart, setShoppingCart] = useState([]);
 
   return (
     <>
