@@ -24,7 +24,7 @@ function ItemCard({item}) {
             <h4>{item.price}</h4>
             <div className='itemSelectionFields'>
                 <input type='number' id={item.id} onChange={handleInputChange} min='0' required />
-                <button id={item.id} onClick={() => addToCart(item.id,numItem)}>Add to Cart</button>
+                <button id={item.id} onClick={ () => addToCart(item,numItem)}>Add to Cart</button>
             </div>
         </div>
     )

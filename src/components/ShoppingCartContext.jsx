@@ -9,22 +9,16 @@ export function useShoppingCart(){
 export function ShoppingCartProvider ({children}) {
     const [cartItems, setCartItems] = useState([])
 
-    function addToCart(id,quantity){
-        console.log(id);
-        console.log(quantity);
-        setCartItems(currItems => {
-            if(currItems.find(item=>item.id ===id) == null) {
-                return [...currItems, {id: quantity}]
-            } else {
-                return currItems.map(item => {
-                    if(item.id===id){
-                        return {...item, quantity}
-                    } else {
-                        return item
-                    }
-                })
+
+    function addToCart(item, numItem){
+        console.log(item);
+        console.log(numItem);
+        setCartItems([...cartItems, 
+            {id: item.id, 
+            quantity: numItem,
+            price: item.price
             }
-        })
+        ])
         console.log(cartItems);
     }
     
