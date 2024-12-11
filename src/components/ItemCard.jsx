@@ -1,6 +1,6 @@
 import styles from '../styles/ItemCard.module.css';
 import {useState} from 'react';
-import { useShoppingCart } from './ShoppingCart';
+import { useShoppingCart } from './ShoppingCartContext';
 
 function ItemCard({item}) {
 
@@ -8,12 +8,12 @@ function ItemCard({item}) {
 
 
         const handleInputChange =(e) => {
-            const {numItem} = e.target;
-            setNumItem(numItem);
+            let newNumItem = e.target.value;
+            console.log(e.target.value);
+            setNumItem(newNumItem);
         }
 
-        const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useShoppingCart()
-        const quantity = getItemQuantity(item.id);
+        const { addToCart } = useShoppingCart()
 
 
     return(
@@ -24,7 +24,7 @@ function ItemCard({item}) {
             <h4>{item.price}</h4>
             <div className='itemSelectionFields'>
                 <input type='number' id={item.id} onChange={handleInputChange} min='0' required />
-                <button id={item.id} onClick={() => increaseCartQuantity(item.id)}>Add to Cart</button>
+                <button id={item.id} onClick={() => addToCart(item.id,numItem)}>Add to Cart</button>
             </div>
         </div>
     )

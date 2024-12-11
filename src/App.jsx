@@ -5,13 +5,11 @@ import Shop from './components/Shop.jsx'
 import ErrorPage from './components/ErrorPage.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {useState} from 'react'
-import {ShoppingCartProvider} from './components/ShoppingCart.jsx';
+import {ShoppingCartProvider} from './components/ShoppingCartContext.jsx';
 
 
 function App() {
   
-  const [shoppingCart, setShoppingCart] = useState([]);
-
   return (
     <>
     <BrowserRouter>
