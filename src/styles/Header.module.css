@@ -6,8 +6,9 @@ nav {
     font-size: 18px;
 }
 
-.leftNavbar {
+.leftNavbar, .rightNavbar {
     display: flex;
+    align-items: center;
 }
 
 h2 {

@@ -8,13 +8,16 @@ function ItemCard({item}) {
 
 
         const handleInputChange =(e) => {
-            let newNumItem = e.target.value;
-            console.log(e.target.value);
+            let newNumItem = e.target.valueAsNumber;
             setNumItem(newNumItem);
         }
 
         const { addToCart } = useShoppingCart()
 
+        const addButtonClick = (e) => {
+            addToCart(item,numItem);
+            setNumItem(0);
+        }
 
     return(
         <div className="shopCard">
@@ -23,8 +26,8 @@ function ItemCard({item}) {
             <p>{item.description}</p>
             <h4>{item.price}</h4>
             <div className='itemSelectionFields'>
-                <input type='number' id={item.id} onChange={handleInputChange} min='0' required />
-                <button id={item.id} onClick={ () => addToCart(item,numItem)}>Add to Cart</button>
+                <input type='number' id={item.id} value={numItem} onChange={handleInputChange} min='0' required />
+                <button id={item.id} onClick={addButtonClick}>Add to Cart</button>
             </div>
         </div>
     )

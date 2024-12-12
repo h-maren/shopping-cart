@@ -8,6 +8,7 @@ export function useShoppingCart(){
 
 export function ShoppingCartProvider ({children}) {
     const [cartItems, setCartItems] = useState([])
+    const cartQuantity=cartItems.reduce((quantity, item) => item.quantity+quantity,0);
 
 
     function addToCart(item, numItem){
@@ -23,7 +24,7 @@ export function ShoppingCartProvider ({children}) {
     }
     
 
-    return <ShoppingCartContext.Provider value={{ addToCart}}>
+    return <ShoppingCartContext.Provider value={{ addToCart, cartItems, cartQuantity}}>
     {children}
     </ShoppingCartContext.Provider>
 }
