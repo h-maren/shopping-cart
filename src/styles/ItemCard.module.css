@@ -1,0 +1,38 @@
+img {
+    max-width: 200px;
+    height: auto;
+    max-height: 200px;
+}
+
+.shopCard {
+  margin: 10px;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottomContent {
+    margin: 10px;
+}
+
+.itemSelectionFields {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    max-width: 50px;
+}
+
+h4 {
+    margin: 10px;
+}
+
+p {
+    margin: 5px;
+    font-size: 14px;
+}

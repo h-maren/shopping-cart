@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+}
+
+:root {
+  font-family: 'rubikregular', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'rubikbold';
+  src: url('styles/fonts/rubik-bold-webfont.woff2') format('woff2'),
+       url('styles/fonts/rubik-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'rubikitalic';
+  src: url('styles/fonts/rubik-italic-webfont.woff2') format('woff2'),
+       url('styles/fonts/rubik-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'rubikregular';
+  src: url('styles/fonts/rubik-regular-webfont.woff2') format('woff2'),
+       url('styles/fonts/rubik-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}

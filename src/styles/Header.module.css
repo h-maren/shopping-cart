@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    font-size: 18px;
+}
+
+.leftNavbar, .rightNavbar {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    margin: 5px 10px;
+}
+
