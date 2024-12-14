@@ -52,8 +52,7 @@ export function ShoppingCartProvider ({children}) {
     }
 
     function removeFromCart(itemID){
-        console.log(itemID);
-        setCartItems(cartItems.filter((cartItem)=>cartItem.id !== itemID));
+        setCartItems(cartItems.filter(cartItem=>cartItem.id !== itemID));
     }
 
 
