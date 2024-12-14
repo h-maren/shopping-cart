@@ -19,12 +19,14 @@ const ShoppingCart =() => {
                     <ul>
                         {cartItems.map((item) => (
                             <li key={item.id}>
+                                <h4>
                                 {item.quantity} x {item.title} = ${item.price}
+                                </h4>
                                 <button id={item.id} onClick={()=>removeFromCart(item.id)}>Remove</button>
                             </li>
                         ))}
                     </ul>
-                    <h4>Total Cost: ${totalPrice}</h4>
+                    <h2>Total Cost: ${totalPrice}</h2>
                     </>
                 )}
                 <div className={styles.cartButtons}>

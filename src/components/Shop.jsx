@@ -15,8 +15,7 @@ const Shop = () => {
             setShopData(data);
         })
     },[])
-    console.log(shopData);
-
+    
     if(!isLoading){
         return (
             <div className={styles.cardContainer}>

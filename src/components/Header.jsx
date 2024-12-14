@@ -3,13 +3,12 @@ import { mdiCart } from '@mdi/js';
 import styles from '../styles/Header.module.css';
 import { Link } from 'react-router-dom';
 import { useShoppingCart } from './ShoppingCartContext';
-import ShoppingCart from './ShoppingCart';
 
 
 
 const Header = () => {
 
-    const { isOpen, openCart, closeCart, cartQuantity } = useShoppingCart()
+    const { openCart, cartQuantity } = useShoppingCart()
 
 
     return (

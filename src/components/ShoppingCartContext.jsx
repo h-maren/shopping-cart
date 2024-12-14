@@ -1,4 +1,6 @@
 import { createContext, useContext, useState } from "react";
+import PropTypes from 'prop-types';
+
 
 const ShoppingCartContext=createContext({})
 
@@ -14,7 +16,6 @@ export function ShoppingCartProvider ({children}) {
 
     function openCart() {
         setIsOpen(true);
-        console.log(isOpen);
     }
 
     function closeCart(){
@@ -46,15 +47,15 @@ export function ShoppingCartProvider ({children}) {
                 price: item.price
                 }]);
         }
-        console.log(item);
-        console.log(numItem);
-        console.log(cartItems);
     }
 
     function removeFromCart(itemID){
         setCartItems(cartItems.filter(cartItem=>cartItem.id !== itemID));
     }
 
+    ShoppingCartProvider.propTypes = {
+        children: PropTypes.node,
+    }
 
     
 

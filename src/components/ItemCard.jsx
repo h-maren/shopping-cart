@@ -1,6 +1,7 @@
 import styles from '../styles/ItemCard.module.css';
 import {useState} from 'react';
 import { useShoppingCart } from './ShoppingCartContext';
+import PropTypes from 'prop-types';
 
 function ItemCard({item}) {
 
@@ -14,9 +15,19 @@ function ItemCard({item}) {
 
         const { addToCart } = useShoppingCart()
 
-        const addButtonClick = (e) => {
+        const addButtonClick = () => {
             addToCart(item,numItem);
             setNumItem(0);
+        }
+
+        ItemCard.propTypes = {
+            item: PropTypes.shape({
+                title: PropTypes.string,
+                image: PropTypes.string,
+                description: PropTypes.string,
+                id: PropTypes.number,
+                price: PropTypes.number,
+            })
         }
 
     return(
