@@ -19,7 +19,7 @@ const Header = () => {
                 <h2><Link to="/shop">Shop</Link></h2>
             </div>
             <div className={styles.rightNavbar}>
-                <Icon path={mdiCart} size={1} onClick={openCart} />
+                <Icon data-testid='cartIcon' path={mdiCart} size={1} onClick={openCart} />
                 <div>({cartQuantity})</div>
             </div>
         </nav>
